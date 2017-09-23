@@ -6,10 +6,29 @@
 </head>
 
 <body>
+        <h2>Login To Your Account </h2>
 
+        <div class="form">
+          <div class="pad">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email"/>
+          </div>
+          <div class="pad">
+            <label for="pw">Password:</label>
+            <input type="password" id="pw"/>
+          </div>
+          <i><a id="forgot" href="forgot.html">Forgot Password?</a></i><br />
+          <i><a  href="createAccount.html">Create an Account</a></i>
+        <br />
+        <br />
+          <a href="#" id="login-btn"class="no-dec-a" >Login</a>
+
+        </div>
 
 
 <script>
+var sessionUser;
+
 var user1 = {
         doorState: 0,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
         email:"rocketman@up.nk",
@@ -26,7 +45,25 @@ var user2 = {
 }
 //array of user account objects
 var users = [user1, user2];
-console.log(users);
+
+
+document.getElementById("login-btn").addEventListener("click", function (){
+
+        var email = document.getElementById('email').value;
+
+        if (email == user1.email) {
+                console.log("USER 1 LOGIN"); //replace with call to display function 
+                sessionUser = user1;
+                console.log(sessionUser);
+        }
+        if (email == user2.email) {
+                console.log("USER 2 LOGIN");//replace with call to display function
+                sessionUser = user2;
+        }
+        if(email != user1.email && email != user2.email) {
+                console.log("WRONG LOGIN INFO");//replace with print to page of inncorrect password or email
+        }
+});
 
 
 
