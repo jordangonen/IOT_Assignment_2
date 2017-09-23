@@ -2,6 +2,9 @@
 <html>
 <head>
 <title>Title of the document</title>
+
+<link rel="stylesheet" type="text/css" href="css.css">
+
 </head>
 
 <body>
@@ -28,8 +31,8 @@
     <label for="pw">Password:</label>
     <input type="password" id="pw"/>
   </div>
-  <i><a id="forgot" href="forgot.html">Forgot Password?</a></i><br />
-  <i><a  href="createAccount.html">Create an Account</a></i>
+  <i><button id="forgot-pwd-btn">Forgot Password?</button></i><br />
+  <i><button id="create-account-btn">Create an Account</button></i>
 <br />
 <br />
   <button class="no-dec-a" id="login-btn">Login</button>
@@ -62,7 +65,7 @@
     <label for="phone">ID Number</label>
     <input type="number" class="form-control" id="id" />
   </div>
-  <button class="no-dec-a" id="create-btn">Create Account</button>
+  <button class="no-dec-a" id="complete-creation-btn">Create Account</button>
 </div>
 
 </div>
@@ -76,11 +79,11 @@
 
   <label for="email">Email Address:</label>
   <input type="email" id="email"/>
-  <button class="no-dec-a" id="request-btn">Request</button>
+  <button class="no-dec-a" id="request-pwd-btn">Request</button>
   </div>
 </div>
 <!-- Reset the Password -->
-<div id="request-page">
+<div id="reset-page">
   <h2>Reset Your Password</h2>
   <div class="form">
     <label for="email">Email Address:</label>
@@ -133,9 +136,10 @@
         </div>
 
         <div class="card-btns" id="open">
-                <a href="#" class="no-dec-a">Close</a>
-                <a href="edit.html" class="no-dec-a">Settings</a>
+                <button class="no-dec-a" id="close-btn">Close</button>
+                <button class="no-dec-a" id="settings-btn">Settings</button>
         </div>
+</div>
 </div>
 
 <!--Edit Modals -->
@@ -204,9 +208,10 @@
                           <input class="num-input" type="number" value="10" > <label>mins</label>
 
               </div>
-              <a href="main.html" class="no-dec-a">Save Changes</a>
+              <button class="no-dec-a" id="save-btn">Save Changes</button>
       </div>
 </div>
 </body>
+<script src="javascript.js"></script>
 
 </html>
