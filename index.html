@@ -15,7 +15,7 @@
         </li>
 </ul>
 <!--login -->
-<div>
+<div id="login-page">
 
 <h2>Login To Your Account </h2>
 
@@ -32,12 +32,12 @@
   <i><a  href="createAccount.html">Create an Account</a></i>
 <br />
 <br />
-  <a href="main.html" class="no-dec-a" >Login</a>
+  <button class="no-dec-a" id="login-btn">Login</button>
 
  </div>
 </div>
 <!--Create Account -->
-<div>
+<div id="create-page">
 
 <h2>Create an Account! </h2>
 
@@ -62,31 +62,27 @@
     <label for="phone">ID Number</label>
     <input type="number" class="form-control" id="id" />
   </div>
-  <a href="main.html" class="no-dec-a">Create Account</a>
+  <button class="no-dec-a" id="create-btn">Create Account</button>
 </div>
 
 </div>
 
 <!--Request New Password  -->
 
-<div>
+<div id="request-page">
   <h2>Request A New Password</h2>
 
   <div class="form">
 
   <label for="email">Email Address:</label>
   <input type="email" id="email"/>
-  <a href="resetpw.html" class="no-dec-a">Request</a>
-
+  <button class="no-dec-a" id="request-btn">Request</button>
   </div>
 </div>
 <!-- Reset the Password -->
-<div>
-
+<div id="request-page">
   <h2>Reset Your Password</h2>
-
   <div class="form">
-
     <label for="email">Email Address:</label>
     <input type="email" id="email"/>
     <br />
@@ -97,20 +93,18 @@
 
     <label for="pw">Confirm Password:</label>
     <input type="password" />
-    <a href="login.html" class="no-dec-a">Reset</a>
+    <button class="no-dec-a" id="reset-btn">Reset</button>
 
   </div>
 
 </div>
 
 <!--Main Page  -->
-<div>
+<div id="main-page">
   <div class="card">
         <div class="card-title">Door 1</div>
-
         <div class="card-status">
                 <table class="card-table">
-
                         <tr>
                                 <td class="card-td fa-i">
                                         <i class="fa fa-thermometer-empty" aria-hidden="true"></i>
@@ -143,56 +137,9 @@
                 <a href="edit.html" class="no-dec-a">Settings</a>
         </div>
 </div>
-<div class="card">
-        <div class="card-title">Door 2</div>
-
-        <div class="card-status">
-                <table class="card-table">
-
-                        <tr>
-                                <td class="card-td fa-i">
-                                        <i class="fa fa-thermometer-empty" aria-hidden="true"></i>
-                                </td>
-                                <td class="card-td fa-i">
-                                        <i class="fa fa-tint" aria-hidden="true"></i>
-                                </td>
-                                <td class="card-td fa-i">
-                                        <i class="fa fa-male" aria-hidden="true"></i>
-
-                                </td>
-                        </tr>
-                        <tr>
-                                <td class="card-td">
-                                        <h2>76f</h2>
-                                </td>
-                                <td class="card-td">
-                                        <h2>44%</h2>
-                                </td>
-                                <td class="card-td">
-                                        <h2>no</h2>
-                                </td>
-                        </tr>
-
-                </table>
-        </div>
-
-        <div class="card-btns">
-                <a href="#" class="no-dec-a">Close</a>
-                <a href="edit.html" class="no-dec-a">Settings</a>
-        </div>
-</div>
-<div class="card">
-        <div class="card-title">New Door</div>
-
-        <div class="new-card-content">
-                <a class="new-card-link" href="new.html"><h1>+</h1></a>
-        </div>
-
-</div>
-</div>
 
 <!--Edit Modals -->
-<div>
+<div id="edit-page">
   <div class="form-container">
               <div>
                       <label>Garage Name</label>
