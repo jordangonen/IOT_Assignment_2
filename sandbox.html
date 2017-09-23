@@ -1,28 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<style>
+#test {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(65, 159, 49);
 
+}
+</style>
 
 </head>
 
 <body>
-        <h2>Login To Your Account </h2>
-
-        <div class="form">
-          <div class="pad">
-            <label for="email">Email Address:</label>
-            <input type="email" id="email"/>
-          </div>
-          <div class="pad">
-            <label for="pw">Password:</label>
-            <input type="password" id="pw"/>
-          </div>
-          <i><a id="forgot" href="forgot.html">Forgot Password?</a></i><br />
-          <i><a  href="createAccount.html">Create an Account</a></i>
-        <br />
-        <br />
-          <a href="#" id="login-btn"class="no-dec-a" >Login</a>
-
+        <div id="test">
+                <h1>SHIT</h1>
         </div>
 
 
@@ -30,14 +22,26 @@
 var sessionUser;
 
 var user1 = {
-        doorState: 0,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
+        door: {
+                state:0,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
+                temp: 72,
+                hum: 34,
+                motion: true, // boolean
+
+        },
         email:"rocketman@up.nk",
         password:"bestkorea",
         phone:"5555555555",
         id:1234563
 }
 var user2 = {
-        doorState: 3,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
+        door: {
+                state:3,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
+                temp: 72,
+                hum: 34,
+                motion: true, // boolean
+
+        },
         email:"dotard@down.us",
         password:"maga",
         phone:"5555555566",
@@ -47,24 +51,32 @@ var user2 = {
 var users = [user1, user2];
 
 
-document.getElementById("login-btn").addEventListener("click", function (){
 
-        var email = document.getElementById('email').value;
+sessionUser = user1;
 
-        if (email == user1.email) {
-                console.log("USER 1 LOGIN"); //replace with call to display function 
-                sessionUser = user1;
-                console.log(sessionUser);
+function stateChange() {
+        //
+        // green rgb(65, 159, 49)
+        // red rgb(247, 47, 47)
+        if (sessionUser.door.state == 0) { //down to up animation
+                sessionUser.door.state = 1;
+                document.getElementById('test').style.backgroundColor  = 'rgb(247, 231, 12)';
+
+                setTimeout(function(){ document.getElementById('test').style.backgroundColor  = 'rgb(247, 47, 49)'; }, 5000);
         }
-        if (email == user2.email) {
-                console.log("USER 2 LOGIN");//replace with call to display function
-                sessionUser = user2;
+        if (sessionUser.door.state == 3) { // up to down animation
+                sessionUser.door.state = 2;
+                document.getElementById('test').style.backgroundColor  = 'rgb(247, 231, 12)';
+
+                setTimeout(function(){ document.getElementById('test').style.backgroundColor  = 'rgb(65, 159, 49)'; }, 5000);
         }
-        if(email != user1.email && email != user2.email) {
-                console.log("WRONG LOGIN INFO");//replace with print to page of inncorrect password or email
-        }
+
+}
+
+document.getElementById('test').addEventListener("click", function (){
+        stateChange();
+
 });
-
 
 
 </script>
