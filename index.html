@@ -105,7 +105,8 @@
 <!--Main Page  -->
 <div id="main-page">
   <div class="card">
-        <div class="card-title">Door 1</div>
+        <div class="card-title" >
+                <h2 id="card-title"></h2></div>
         <div class="card-status">
                 <table class="card-table">
                         <tr>
@@ -122,13 +123,13 @@
                         </tr>
                         <tr>
                                 <td class="card-td">
-                                        <h2>76f</h2>
+                                        <h2 id="temp-display">76f</h2>
                                 </td>
                                 <td class="card-td">
-                                        <h2>44%</h2>
+                                        <h2 id="hum-display">44%</h2>
                                 </td>
                                 <td class="card-td">
-                                        <h2>no</h2>
+                                        <h2 id="motion-display">no</h2>
                                 </td>
                         </tr>
 
@@ -148,13 +149,13 @@
               <div>
                       <label>Garage Name</label>
                       <div>
-                              <input type="text" value="Garage Name">
+                              <input type="text" value="Garage Name" id="garage-name">
                       </div>
               </div>
               <div>
                       <label>Garage ID</label>
                       <div>
-                              <input type="text" value="ID">
+                              <input type="text" value="ID" id="garage-id">
                       </div>
               </div>
               <div>
@@ -162,15 +163,15 @@
 
                       <h3> Which Enviromental Sensors Do You Have?</h3>
                       <label>
-            <input type="checkbox" >
+            <input type="checkbox" id="temp-check">
             Temperature
           </label>
                       <label>
-                <input type="checkbox" >
+                <input type="checkbox" id="hum-check">
                 Humidity
               </label>
                       <label>
-                    <input type="checkbox" >
+                    <input type="checkbox" id="motion-check">
                     Motion Sensing
                   </label>
 
@@ -185,7 +186,7 @@
               <div>
                       <label>Auto open door when you are how many yards away? (0 turns this off) </label>
                       <div>
-                              <input class="yard-input" type="number" value="400" > yards
+                              <input class="yard-input" type="number" value="400" id="yard-input"> yards
                       </div>
               </div>
               <div>
@@ -193,16 +194,16 @@
 
                       <h3>Mobile Alerts?</h3>
                       <label>
-                    <input type="checkbox" >
+                    <input type="checkbox" id="door-opens-check">
                     Door Opens
                   </label>
                       <label>
-                        <input type="checkbox" >
+                        <input type="checkbox" id="door-closes-check" >
                         Door Closes
                       </label>
                       <br />
                       <label>
-                            <input type="checkbox" >
+                            <input type="checkbox" id="door-open-check">
                             Door Open For:
                           </label>
                           <input class="num-input" type="number" value="10" > <label>mins</label>
