@@ -1,62 +1,68 @@
 //users
 var sessionUser;
 
-var user1 = {
-        door: {
-                state:0,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
-                temp: 72,
-                hum: 34,
-                motion: true, // boolean
 
-        },
-        email:"rocketman@up.nk",
-        password:"bestkorea",
-        phone:"5555555555",
-        id:1234563,
-        settings: {
-                name: "Home",
-                temp: true,
-                hum: true,
-                motion: true,
-                autoClose: 14,
-                autoOpen: 200,
-                mobile: {
-                        open: true,
-                        close: true,
-                        openFor: 11,
-                }
-
-        }
-}
-var user2 = {
-        door: {
-                state:3,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
-                temp: 72,
-                hum: 34,
-                motion: true, // boolean
-
-        },
-        email:"dotard@down.us",
-        password:"maga",
-        phone:"5555555566",
-        id:9876123,
-        settings: {
-                name: "Home",
-                temp: true,
-                hum: true,
-                motion: true,
-                autoClose: 14,
-                autoOpen: 200,
-                mobile: {
-                        open: true,
-                        close: true,
-                        openFor: 11,
-                }
-
-        }
-}
 //array of user account objects
-var users = [user1, user2];
+var users = [
+
+         user1 = {
+                door: {
+                        state:0,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
+                        temp: 72,
+                        hum: 34,
+                        motion: true, // boolean
+
+                },
+                email:"rocketman@up.nk",
+                password:"bestkorea",
+                phone:"5555555555",
+                id:1234563,
+                settings: {
+                        name: "Home",
+                        temp: true,
+                        hum: true,
+                        motion: true,
+                        autoClose: 14,
+                        autoOpen: 200,
+                        mobile: {
+                                open: true,
+                                close: true,
+                                openFor: 11,
+                        }
+
+                }
+        },
+         user2 = {
+                door: {
+                        state:3,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
+                        temp: 72,
+                        hum: 34,
+                        motion: true, // boolean
+
+                },
+                email:"dotard@down.us",
+                password:"maga",
+                phone:"5555555566",
+                id:9876123,
+                settings: {
+                        name: "Home",
+                        temp: true,
+                        hum: true,
+                        motion: true,
+                        autoClose: 14,
+                        autoOpen: 200,
+                        mobile: {
+                                open: true,
+                                close: true,
+                                openFor: 11,
+                        }
+
+                }
+        }
+
+
+
+];
 
 
 
