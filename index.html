@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+<!--Nav Bar  -->
+<ul class="nav-bar">
+        <li>
+                <a href="#">Garage Door Company</a>
+        </li>
+        <li>
+                <a href="#">Doors</a>
+        </li>
+</ul>
+<!--login -->
+<div>
+
+<h2>Login To Your Account </h2>
+
+<div class="form">
+  <div class="pad">
+    <label for="email">Email Address:</label>
+    <input type="email" id="email"/>
+  </div>
+  <div class="pad">
+    <label for="pw">Password:</label>
+    <input type="password" id="pw"/>
+  </div>
+  <i><a id="forgot" href="forgot.html">Forgot Password?</a></i><br />
+  <i><a  href="createAccount.html">Create an Account</a></i>
+<br />
+<br />
+  <a href="main.html" class="no-dec-a" >Login</a>
+
+ </div>
+</div>
+<!--Create Account -->
+<div>
+
+<h2>Create an Account! </h2>
+
+<div class="form">
+  <div class="pad">
+    <label for="email">Email Address:</label>
+    <input type="email" id="email"/>
+  </div>
+  <div class="pad">
+    <label for="pw">New Password:</label>
+    <input type="password" id="pw"/>
+  </div>
+  <div class="pad">
+    <label for="pw">Confirm Password:</label>
+    <input type="password"/>
+  </div>
+  <div class="pad">
+    <label for="phone">Phone Number</label>
+    <input type="tel" class="form-control" id="phone" />
+  </div>
+  <div class="pad">
+    <label for="phone">ID Number</label>
+    <input type="number" class="form-control" id="id" />
+  </div>
+  <a href="main.html" class="no-dec-a">Create Account</a>
+</div>
+
+</div>
+
+<!--Request New Password  -->
+
+<div>
+  <h2>Request A New Password</h2>
+
+  <div class="form">
+
+  <label for="email">Email Address:</label>
+  <input type="email" id="email"/>
+  <a href="resetpw.html" class="no-dec-a">Request</a>
+
+  </div>
+</div>
+<!-- Reset the Password -->
+<div>
+
+  <h2>Reset Your Password</h2>
+
+  <div class="form">
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email"/>
+    <br />
+    <br />
+
+    <label for="pw">New Password:</label>
+    <input type="password" id="pw"/>
+
+    <label for="pw">Confirm Password:</label>
+    <input type="password" />
+    <a href="login.html" class="no-dec-a">Reset</a>
+
+  </div>
+
+</div>
+
+<!--Main Page  -->
+<div>
+  <div class="card">
+        <div class="card-title">Door 1</div>
+
+        <div class="card-status">
+                <table class="card-table">
+
+                        <tr>
+                                <td class="card-td fa-i">
+                                        <i class="fa fa-thermometer-empty" aria-hidden="true"></i>
+                                </td>
+                                <td class="card-td fa-i">
+                                        <i class="fa fa-tint" aria-hidden="true"></i>
+                                </td>
+                                <td class="card-td fa-i">
+                                        <i class="fa fa-male" aria-hidden="true"></i>
+
+                                </td>
+                        </tr>
+                        <tr>
+                                <td class="card-td">
+                                        <h2>76f</h2>
+                                </td>
+                                <td class="card-td">
+                                        <h2>44%</h2>
+                                </td>
+                                <td class="card-td">
+                                        <h2>no</h2>
+                                </td>
+                        </tr>
+
+                </table>
+        </div>
+
+        <div class="card-btns" id="open">
+                <a href="#" class="no-dec-a">Close</a>
+                <a href="edit.html" class="no-dec-a">Settings</a>
+        </div>
+</div>
+<div class="card">
+        <div class="card-title">Door 2</div>
+
+        <div class="card-status">
+                <table class="card-table">
+
+                        <tr>
+                                <td class="card-td fa-i">
+                                        <i class="fa fa-thermometer-empty" aria-hidden="true"></i>
+                                </td>
+                                <td class="card-td fa-i">
+                                        <i class="fa fa-tint" aria-hidden="true"></i>
+                                </td>
+                                <td class="card-td fa-i">
+                                        <i class="fa fa-male" aria-hidden="true"></i>
+
+                                </td>
+                        </tr>
+                        <tr>
+                                <td class="card-td">
+                                        <h2>76f</h2>
+                                </td>
+                                <td class="card-td">
+                                        <h2>44%</h2>
+                                </td>
+                                <td class="card-td">
+                                        <h2>no</h2>
+                                </td>
+                        </tr>
+
+                </table>
+        </div>
+
+        <div class="card-btns">
+                <a href="#" class="no-dec-a">Close</a>
+                <a href="edit.html" class="no-dec-a">Settings</a>
+        </div>
+</div>
+<div class="card">
+        <div class="card-title">New Door</div>
+
+        <div class="new-card-content">
+                <a class="new-card-link" href="new.html"><h1>+</h1></a>
+        </div>
+
+</div>
+</div>
+
+<!--Edit Modals -->
+<div>
+  <div class="form-container">
+              <div>
+                      <label>Garage Name</label>
+                      <div>
+                              <input type="text" value="Garage Name">
+                      </div>
+              </div>
+              <div>
+                      <label>Garage ID</label>
+                      <div>
+                              <input type="text" value="ID">
+                      </div>
+              </div>
+              <div>
+
+
+                      <h3> Which Enviromental Sensors Do You Have?</h3>
+                      <label>
+            <input type="checkbox" >
+            Temperature
+          </label>
+                      <label>
+                <input type="checkbox" >
+                Humidity
+              </label>
+                      <label>
+                    <input type="checkbox" >
+                    Motion Sensing
+                  </label>
+
+              </div>
+<br />
+              <div>
+                      <label>How long should the door wait to auto close(mins)? (0 turns this off)</label>
+                      <div>
+                              <input class="num-input" type="number" value="10" id="example-number-input">
+                      </div>
+              </div>
+              <div>
+                      <label>Auto open door when you are how many yards away? (0 turns this off) </label>
+                      <div>
+                              <input class="yard-input" type="number" value="400" > yards
+                      </div>
+              </div>
+              <div>
+
+
+                      <h3>Mobile Alerts?</h3>
+                      <label>
+                    <input type="checkbox" >
+                    Door Opens
+                  </label>
+                      <label>
+                        <input type="checkbox" >
+                        Door Closes
+                      </label>
+                      <br />
+                      <label>
+                            <input type="checkbox" >
+                            Door Open For:
+                          </label>
+                          <input class="num-input" type="number" value="10" > <label>mins</label>
+
+              </div>
+              <a href="main.html" class="no-dec-a">Save Changes</a>
+      </div>
+</div>
+</body>
+
+</html>
