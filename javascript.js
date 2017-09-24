@@ -1,7 +1,7 @@
 //users
 var sessionUser;
 var currentView;
-
+var newUser = false;
 
 //array of user account objects
 var users = [
@@ -169,14 +169,24 @@ document.getElementById("login-btn").addEventListener("click", function() {
                 sessionUser = user1;
                 mainSetter();
                 displayElement("login-page","main-page");
+                document.getElementById('logout-li').innerHTML = '<a href="#" id="logout">Logout</a>';
+                document.getElementById("logout").addEventListener("click", function() {
+                    location.reload();
+                });
 
         }
         if (email == user2.email && password == user2.password) {
 
                 console.log("USER 2 LOGIN");//replace with call to display function
                 sessionUser = user2;
+
                 mainSetter();
                 displayElement("login-page","main-page");
+                document.getElementById('logout-li').innerHTML = '<a href="#" id="logout">Logout</a>';
+                document.getElementById("logout").addEventListener("click", function() {
+                    location.reload();
+                });
+
         }
 
                 if (newUser == true) {
@@ -186,6 +196,10 @@ document.getElementById("login-btn").addEventListener("click", function() {
                                 sessionUser = user3;
                                 mainSetter();
                                 displayElement("login-page","main-page");
+                                document.getElementById('logout-li').innerHTML = '<a href="#" id="logout">Logout</a>';
+                                document.getElementById("logout").addEventListener("click", function() {
+                                    location.reload();
+                                });
                         }
                         if(email != user1.email && email != user2.email && email != user3.email) {
                                 alert("Wrong Login Details. Try Again.");
@@ -286,9 +300,7 @@ document.getElementById('nav-doors').addEventListener('click', function() {
 document.getElementById("close-btn").addEventListener("click", function() {
     stateChange();
 });
-document.getElementById("logout").addEventListener("click", function() {
-    location.reload();
-});
+
 
 
 

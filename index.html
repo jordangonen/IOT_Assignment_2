@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Title of the document</title>
-
+<meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -16,8 +16,8 @@
         <li>
                 <a href="#" id="nav-doors">Doors</a>
         </li>
-        <li>
-                <a href="#" id="Logout">Logout</a>
+        <li id="logout-li">
+
         </li>
 </ul>
 <!--login -->
@@ -27,11 +27,11 @@
 
 <div class="form">
   <div class="pad">
-    <label for="email">Email Address:</label>
+    <label >Email Address:</label>
     <input type="email" id="email"/>
   </div>
   <div class="pad">
-    <label for="pw">Password:</label>
+    <label >Password:</label>
     <input type="password" id="pw"/>
   </div>
   <i><button id="forgot-pwd-btn">Forgot Password?</button></i><br />
@@ -49,23 +49,23 @@
 
 <div class="form">
   <div class="pad">
-    <label for="email-registration">Email Address:</label>
+    <label >Email Address:</label>
     <input type="email" id="email-registration"/>
   </div>
   <div class="pad">
-    <label for="pw-registation">New Password:</label>
+    <label >New Password:</label>
     <input type="password" id="pw-registration"/>
   </div>
   <div class="pad">
-    <label for="pw">Confirm Password:</label>
+    <label >Confirm Password:</label>
     <input type="password"/>
   </div>
   <div class="pad">
-    <label for="phone-registration">Phone Number</label>
+    <label >Phone Number</label>
     <input type="tel" class="form-control" id="phone-registration" />
   </div>
   <div class="pad">
-    <label for="id-registration">ID Number</label>
+    <label>ID Number</label>
     <input type="number" class="form-control" id="id-registration" />
   </div>
   <button class="no-dec-a" id="complete-creation-btn">Create Account</button>
@@ -83,29 +83,10 @@
   <label for="email">Email Address:</label>
   <input type="email" id="request-email"/>
   <button class="no-dec-a" id="request-pwd-btn">Request</button>
-   <h3 id="password-display"></h3>
   </div>
 </div>
 <!-- Reset the Password -->
-<div id="reset-page">
-  <h2>Reset Your Password</h2>
-  <div class="form">
-    <label for="email">Email Address:</label>
-    <input type="email" id="email"/>
-    <br />
-    <br />
 
-    <label for="pw">New Password:</label>
-    <input type="password" id="pw"/>
-
-    <label for="pw">Confirm Password:</label>
-    <input type="password" />
-    <button class="no-dec-a" id="reset-btn">Reset</button>
-
-
-  </div>
-
-</div>
 
 <!--Main Page  -->
 <div id="main-page">
@@ -216,8 +197,10 @@
               </div>
               <button class="no-dec-a" id="save-btn">Save Changes</button>
       </div>
+
 </div>
-</body>
 <script src="javascript.js"></script>
+</body>
+
 
 </html>
