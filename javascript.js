@@ -8,7 +8,7 @@ var users = [
 
          user1 = {
                 door: {
-                        state:0,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
+                        state:3,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
                         temp: 72,
                         hum: 34,
                         motion: true, // boolean
@@ -35,7 +35,7 @@ var users = [
         },
          user2 = {
                 door: {
-                        state:3,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
+                        state:0,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
                         temp: 72,
                         hum: 34,
                         motion: true, // boolean
@@ -159,8 +159,8 @@ function displayElement(hide, show) {
 document.getElementById("login-btn").addEventListener("click", function() {
 
         var email = document.getElementById('email').value;
-
-        if (email == user1.email) {
+        var password = document.getElementById('pw').value;
+        if (email == user1.email && password == user1.password ) {
 
                 console.log("USER 1 LOGIN"); //replace with call to display function
                 sessionUser = user1;
@@ -168,7 +168,7 @@ document.getElementById("login-btn").addEventListener("click", function() {
                 displayElement("login-page","main-page");
 
         }
-        if (email == user2.email) {
+        if (email == user2.email && password == user2.password) {
 
                 console.log("USER 2 LOGIN");//replace with call to display function
                 sessionUser = user2;
@@ -196,8 +196,9 @@ document.getElementById("complete-creation-btn").addEventListener("click", funct
     displayElement("create-page","main-page");
 });
 document.getElementById("request-pwd-btn").addEventListener("click", function() {
-    displayElement("request-page","reset-page");
+    passWrite();
 });
+
 document.getElementById("reset-btn").addEventListener("click", function() {
     displayElement("reset-page","main-page");
 });
@@ -255,4 +256,27 @@ function stateChange() {
 
         }
 
+}
+
+//retrive forgoten passwords
+
+function passWrite() {
+        var requestUser;
+        if (document.getElementById('request-email').value == user1.email) {
+                requestUser = user1;
+
+        }
+        if (document.getElementById('request-email').value == user2.email) {
+                requestUser = user2;
+        }
+        console.log(requestUser);
+        alert('Your password is ' + requestUser.password);
+        document.getElementById('password-display').innerHTML =  '<button id="back-to-main">Back to Login</button>';
+        document.getElementById("back-to-main").addEventListener("click", function() {
+                passScrape();
+            displayElement("request-page","login-page");
+        });
+}
+function passScrape() {
+        document.getElementById('password-display').innerHTML = '';
 }
