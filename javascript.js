@@ -154,6 +154,9 @@ function displayElement(hide, show) {
   document.getElementById(show).style.display = 'block';
   currentView = show;
 }
+function singleDisplay(x) {
+  document.getElementById(x).style.display ='block';
+}
 
 // login button
 document.getElementById("login-btn").addEventListener("click", function() {
@@ -194,7 +197,6 @@ document.getElementById("login-btn").addEventListener("click", function() {
                 alert("Wrong Login Details. Try Again.");
                 console.log("WRONG LOGIN INFO");//replace with print to page of inncorrect password or email
         }
-
 
 });
 // forgot-password-button
@@ -283,6 +285,9 @@ document.getElementById('nav-doors').addEventListener('click', function() {
 });
 document.getElementById("close-btn").addEventListener("click", function() {
     stateChange();
+});
+document.getElementById("logout").addEventListener("click", function() {
+    location.reload();
 });
 
 

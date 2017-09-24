@@ -163,5 +163,8 @@ body {
 #edit-page{
   display:none;
 
-
+}
+#logout {
+  float: right;
+  display: none;
 }
