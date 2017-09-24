@@ -175,10 +175,26 @@ document.getElementById("login-btn").addEventListener("click", function() {
                 mainSetter();
                 displayElement("login-page","main-page");
         }
-        if(email != user1.email && email != user2.email) {
+
+                if (newUser == true) {
+                        if (email == user3.email && password == user3.password) {
+
+                                console.log("USER 3 LOGIN");//replace with call to display function
+                                sessionUser = user3;
+                                mainSetter();
+                                displayElement("login-page","main-page");
+                        }
+                        if(email != user1.email && email != user2.email && email != user3.email) {
+                                alert("Wrong Login Details. Try Again.");
+                                console.log("WRONG LOGIN INFO");//replace with print to page of inncorrect password or email
+                        }
+
+                }
+        if(newUser == false && email != user1.email && email != user2.email) {
                 alert("Wrong Login Details. Try Again.");
                 console.log("WRONG LOGIN INFO");//replace with print to page of inncorrect password or email
         }
+
 
 });
 // forgot-password-button
@@ -269,6 +285,13 @@ function passWrite() {
         if (document.getElementById('request-email').value == user2.email) {
                 requestUser = user2;
         }
+        if (newUser == true) {
+                if (document.getElementById('request-email').value == user1.email) {
+                        requestUser = user1;
+
+                }
+        }
+
         console.log(requestUser);
         alert('Your password is ' + requestUser.password);
         document.getElementById('password-display').innerHTML =  '<button id="back-to-main">Back to Login</button>';
