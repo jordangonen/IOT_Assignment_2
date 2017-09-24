@@ -1,5 +1,6 @@
 //users
 var sessionUser;
+var currentView;
 
 
 //array of user account objects
@@ -151,6 +152,7 @@ function sensorDisplay() {
 function displayElement(hide, show) {
   document.getElementById(hide).style.display = 'none';
   document.getElementById(show).style.display = 'block';
+  currentView = show;
 }
 
 // login button
@@ -206,9 +208,16 @@ document.getElementById("save-btn").addEventListener("click", function() {
         sensorDisplay();
     displayElement("edit-page","main-page");
 });
+document.getElementById('nav-doors').addEventListener('click', function() {
+        if (currentView != 'login-page') {
+                displayElement(currentView,"main-page");
+        }
+
+});
 document.getElementById("close-btn").addEventListener("click", function() {
     stateChange();
 });
+
 
 
 
