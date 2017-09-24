@@ -209,7 +209,57 @@ document.getElementById("create-account-btn").addEventListener("click", function
     displayElement("login-page","create-page");
 });
 document.getElementById("complete-creation-btn").addEventListener("click", function() {
-    displayElement("create-page","main-page");
+
+
+    if(document.getElementById("email-registration").value != "" &&
+    document.getElementById("email-registration").value != "" &&
+    document.getElementById("pw-registration").value != "" &&
+    document.getElementById("phone-registration").value != "" &&
+    document.getElementById("id-registration").value != "") {
+
+
+      user3 = {
+             door: {
+                     state:3,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
+                     temp: 72,
+                     hum: 34,
+                     motion: true, // boolean
+
+             },
+             email:"",
+             password:"",
+             phone:"",
+             id:"",
+             settings: {
+                     name: "Home",
+                     temp: true,
+                     hum: true,
+                     motion: true,
+                     autoClose: 14,
+                     autoOpen: 200,
+                     mobile: {
+                             open: true,
+                             close: true,
+                             openFor: 11,
+                     }
+
+             }
+      };
+
+      user3.email = document.getElementById("email-registration").value;
+      user3.password = document.getElementById("pw-registration").value;
+      user3.phone = document.getElementById("phone-registration").value;
+      user3.id = document.getElementById("id-registration").value;
+      newUser=true;
+      users.push["user3"];
+      displayElement("create-page","login-page");
+
+    } else {
+      alert("Please fill out the entire form.")
+    }
+
+
+
 });
 document.getElementById("request-pwd-btn").addEventListener("click", function() {
     passWrite();
