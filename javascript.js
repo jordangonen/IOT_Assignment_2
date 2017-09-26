@@ -10,8 +10,8 @@ var users = [
          user1 = {
                 door: {
                         state:3,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
-                        temp: 72,
-                        hum: 34,
+                        temp: "72f",
+                        hum: "34%",
                         motion: true, // boolean
 
                 },
@@ -37,8 +37,8 @@ var users = [
          user2 = {
                 door: {
                         state:0,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
-                        temp: 72,
-                        hum: 34,
+                        temp: "72f",
+                        hum: "34%",
                         motion: true, // boolean
 
                 },
@@ -249,8 +249,8 @@ document.getElementById("complete-creation-btn").addEventListener("click", funct
       user3 = {
              door: {
                      state:3,  // 0 for down, 1 for coming down, 2 for going up, 3 for up
-                     temp: 72,
-                     hum: 34,
+                     temp: "72f",
+                     hum: "34%",
                      motion: true, // boolean
 
              },
@@ -302,7 +302,7 @@ document.getElementById("save-btn").addEventListener("click", function() {
     displayElement("edit-page","main-page");
 });
 document.getElementById('nav-doors').addEventListener('click', function() {
-        if (currentView != 'login-page') {
+        if (currentView != 'login-page' && currentView != 'request-page' && currentView != 'create-page') {
                 displayElement(currentView,"main-page");
         }
 
@@ -311,7 +311,10 @@ document.getElementById("close-btn").addEventListener("click", function() {
     stateChange();
 });
 
-
+document.getElementById("back-to-main").addEventListener("click", function() {
+        passScrape();
+    displayElement("request-page","login-page");
+});
 
 
 
@@ -363,20 +366,17 @@ function passWrite() {
                 requestUser = user2;
         }
         if (newUser == true) {
-                if (document.getElementById('request-email').value == user1.email) {
-                        requestUser = user1;
+                if (document.getElementById('request-email').value == user3.email) {
+                        requestUser = user3;
 
                 }
         }
 
         console.log(requestUser);
         alert('Your password is ' + requestUser.password);
-        document.getElementById('password-display').innerHTML =  '<button id="back-to-main">Back to Login</button>';
-        document.getElementById("back-to-main").addEventListener("click", function() {
-                passScrape();
-            displayElement("request-page","login-page");
-        });
+
+
 }
 function passScrape() {
-        document.getElementById('password-display').innerHTML = '';
+
 }
