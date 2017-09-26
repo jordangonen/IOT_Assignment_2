@@ -1,7 +1,7 @@
 //users
-var sessionUser;
-var currentView;
-var newUser = false;
+var sessionUser; //user object for the session
+var currentView; //current display
+var newUser = false; //has a new user been created?
 
 
 //array of user account objects
@@ -86,7 +86,7 @@ function mainSetter() {
 
 }
 
-function titleSetter() {
+function titleSetter() { //initilizes the page title
         if (sessionUser.door.state == 0) {
                 stateName = "Down";
                 document.getElementById('close-btn').innerHTML = "Open"
@@ -108,7 +108,7 @@ function titleSetter() {
 
 }
 
-function settingsSetter() {
+function settingsSetter() { //initilies the settings states
         document.getElementById('garage-name').value =sessionUser.settings.name;
         document.getElementById('garage-id').value =sessionUser.id;
         document.getElementById('temp-check').checked =sessionUser.settings.temp;
@@ -329,7 +329,7 @@ function stateChange() {
                 console.log(sessionUser.door.state);
                 titleSetter();
 
-                document.getElementById('open').style.backgroundColor  = 'rgb(247, 231, 12)';
+                document.getElementById('open').style.backgroundColor  = 'rgb(247, 231, 12)';//waiting color
 
                 setTimeout(function(){ document.getElementById('open').style.backgroundColor  = 'rgb(247, 47, 49)';
                 sessionUser.door.state = 3;
