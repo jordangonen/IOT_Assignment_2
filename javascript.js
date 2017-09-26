@@ -3,6 +3,7 @@ var sessionUser;
 var currentView;
 var newUser = false;
 
+
 //array of user account objects
 var users = [
 
@@ -171,7 +172,11 @@ document.getElementById("login-btn").addEventListener("click", function() {
                 displayElement("login-page","main-page");
                 document.getElementById('logout-li').innerHTML = '<a href="#" id="logout">Logout</a>';
                 document.getElementById("logout").addEventListener("click", function() {
-                    location.reload();
+                    displayElement(currentView,"login-page");
+                    sessionUser = '';
+                    currentView = 'login-page';
+                    document.getElementById('logout-li').innerHTML = '';
+
                 });
 
         }
@@ -184,8 +189,12 @@ document.getElementById("login-btn").addEventListener("click", function() {
                 displayElement("login-page","main-page");
                 document.getElementById('logout-li').innerHTML = '<a href="#" id="logout">Logout</a>';
                 document.getElementById("logout").addEventListener("click", function() {
-                    location.reload();
+                        displayElement(currentView,"login-page");
+                        sessionUser = '';
+                        currentView = 'login-page';
+                        document.getElementById('logout-li').innerHTML = '';
                 });
+
 
         }
 
@@ -198,7 +207,10 @@ document.getElementById("login-btn").addEventListener("click", function() {
                                 displayElement("login-page","main-page");
                                 document.getElementById('logout-li').innerHTML = '<a href="#" id="logout">Logout</a>';
                                 document.getElementById("logout").addEventListener("click", function() {
-                                    location.reload();
+                                        displayElement(currentView,"login-page");
+                                        sessionUser = '';
+                                        currentView = 'login-page';
+                                        document.getElementById('logout-li').innerHTML = '';
                                 });
                         }
                         if(email != user1.email && email != user2.email && email != user3.email) {
@@ -281,9 +293,7 @@ document.getElementById("request-pwd-btn").addEventListener("click", function() 
     passWrite();
 });
 
-document.getElementById("reset-btn").addEventListener("click", function() {
-    displayElement("reset-page","main-page");
-});
+
 document.getElementById("settings-btn").addEventListener("click", function() {
     displayElement("main-page","edit-page");
 });
