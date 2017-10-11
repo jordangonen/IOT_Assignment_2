@@ -45,7 +45,7 @@ body {
         overflow: hidden;
         display: inline-block;
         background-color: white;
-
+        
 }
 
 .card-title {
@@ -166,5 +166,5 @@ body {
 }
 #logout {
   float: right;
- 
+
 }
